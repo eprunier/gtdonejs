@@ -2,3 +2,5 @@ node_modules
 /css
 .idea
 dist
+bower_components
+lib/vendor

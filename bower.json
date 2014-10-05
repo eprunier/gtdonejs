@@ -1,0 +1,12 @@
+{
+  "name": "gtdonejs",
+  "version": "0.0.6",
+  "dependencies": {
+    "Respond": "https://github.com/scottjehl/Respond.git#1.2.0",
+    "angular": "1.0.7",
+    "angular-sanitize": "1.0.7",
+    "bootstrap": "3.0.0-rc1",
+    "jquery-ui": "1.10.3",
+    "jquery": "1.10.2"
+  }
+}

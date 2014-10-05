@@ -219,13 +219,61 @@ gruntConfig = function (grunt) {
           }
         ]
       }
+    },
+    bower: {
+      dev: {
+        dest: 'lib/vendor',
+        js_dest: 'lib/vendor/js', 
+        css_dest: 'lib/vendor/css',        
+        options: {
+          packageSpecific: {
+            jquery: {
+              files: ['jquery.min.js']
+            },
+            'jquery-ui': {
+              keepExpandedHierarchy: false,
+              files: [
+                'ui/minified/jquery.ui.core.min.js', 
+                'ui/minified/jquery.ui.widget.min.js', 
+                'ui/minified/jquery.ui.mouse.min.js', 
+                'ui/minified/jquery.ui.draggable.min.js', 
+                'ui/minified/jquery.ui.droppable.min.js'
+              ]
+            },
+            Respond: {
+              files: [
+                'respond.min.js'
+              ]
+            },
+            angular: {
+              files: [
+                'angular.min.js'
+              ]
+            },
+            'angular-sanitize': {
+              files: [
+                'angular-sanitize.min.js'
+              ]
+            },
+            bootstrap: {
+              keepExpandedHierarchy: false,
+              files: [
+                'dist/js/bootstrap.min.js',
+                'dist/css/bootstrap.min.css'
+              ]
+            }
+          }
+        }
+      }
     }
   });
+
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-bower');
   grunt.registerTask('build', ['less', 'mkdir', 'compress:app']);
   grunt.registerTask('linux', ['build', 'binconcat:linux', 'chmod:linux', 'copy:linux', 'compress:linux']);
   grunt.registerTask('mac', ['build', 'binconcat:mac', 'chmod:mac', 'copy:mac', 'compress:mac']);
