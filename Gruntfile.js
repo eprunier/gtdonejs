@@ -261,6 +261,27 @@ gruntConfig = function (grunt) {
                 'dist/js/bootstrap.min.js',
                 'dist/css/bootstrap.min.css'
               ]
+            },
+            'node-webkit-linux': {
+              dest: 'lib/vendor/node-webkit/linux',
+              files: [
+                'nw',
+                'nwsnapshot',
+                'nw.pak',
+                'libffmpegsumo.so'
+              ]
+            },
+            'node-webkit-win': {
+              dest: 'lib/vendor/node-webkit/win',
+              files: [
+                'nw.exe',
+                'nwsnapshot.exe',
+                'nw.pak',
+                'ffmpegsumo.dll',
+                'icudt.dll',
+                'libEGL.dll',
+                'libGLESv2.dll'
+              ]
             }
           }
         }
