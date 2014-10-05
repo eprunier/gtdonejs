@@ -46,9 +46,9 @@ gruntConfig = function (grunt) {
     });
   });
 
-  nodeWebkitLinuxDir = path.join('lib', 'node-webkit', 'node-webkit-v0.6.3-linux-x64');
-  nodeWebkitMacDir = path.join('lib', 'node-webkit', 'node-webkit-v0.6.3-osx-ia32');
-  nodeWebkitWinDir = path.join('lib', 'node-webkit', 'node-webkit-v0.6.3-win-ia32');
+  nodeWebkitLinuxDir = path.join('lib', 'vendor', 'node-webkit', 'linux');
+  nodeWebkitMacDir = path.join('lib', 'vendor', 'node-webkit', 'osx');
+  nodeWebkitWinDir = path.join('lib', 'vendor', 'node-webkit', 'win');
   distDir = path.join('dist');
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -94,12 +94,9 @@ gruntConfig = function (grunt) {
               'css/**',
               'img/**',
               'lib/*.js',
-              'lib/angular-1.0.7/**',
-              'lib/bootstrap-3.0.0-rc1/**',
-              'lib/glyphicons/**',
-              'lib/jquery-1.10.2/**',
-              'lib/jquery-ui-1.10.3.custom/**',
-              'lib/Respond-1.2.0/**',
+              'lib/vendor/js/**',
+              'lib/vendor/css/**',
+              'lib/vendor/fonts/**',
               'node_modules/moment/**',
               'views/**',
               'app.js',
@@ -304,7 +301,7 @@ gruntConfig = function (grunt) {
   grunt.registerTask('linux', ['build', 'binconcat:linux', 'chmod:linux', 'copy:linux', 'compress:linux']);
   grunt.registerTask('mac', ['build', 'binconcat:mac', 'chmod:mac', 'copy:mac', 'compress:mac']);
   grunt.registerTask('win', ['build', 'binconcat:win', 'chmod:win', 'copy:win', 'compress:win']);
-  grunt.registerTask('default', ['clean', 'linux', 'win']);
+  grunt.registerTask('default', ['bower', 'clean', 'linux', 'win']);
 };
 
 module.exports = gruntConfig;
