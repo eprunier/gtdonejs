@@ -5,7 +5,7 @@
     "Respond": "https://github.com/scottjehl/Respond.git#1.2.0",
     "angular": "1.0.7",
     "angular-sanitize": "1.0.7",
-    "bootstrap": "3.0.0-rc1",
+    "bootstrap": "3.2.0",
     "jquery-ui": "1.10.3",
     "jquery": "1.10.2",
     "node-webkit-linux": "http://dl.node-webkit.org/v0.10.5/node-webkit-v0.10.5-linux-x64.tar.gz",

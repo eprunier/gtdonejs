@@ -256,10 +256,15 @@ gruntConfig = function (grunt) {
               ]
             },
             bootstrap: {
+              dest: 'lib/vendor/fonts',
               keepExpandedHierarchy: false,
               files: [
                 'dist/js/bootstrap.min.js',
-                'dist/css/bootstrap.min.css'
+                'dist/css/bootstrap.min.css',
+                'dist/fonts/glyphicons-halflings-regular.eot',
+                'dist/fonts/glyphicons-halflings-regular.svg',
+                'dist/fonts/glyphicons-halflings-regular.ttf',
+                'dist/fonts/glyphicons-halflings-regular.woff'
               ]
             },
             'node-webkit-linux': {
