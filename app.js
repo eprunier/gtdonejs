@@ -388,15 +388,15 @@ module.run(function ($rootScope, $location, $route, $exceptionHandler) {
   win.resizeTo($rootScope.settings.winWidth, $rootScope.settings.winHeight);
   win.show();
 
-  function refreshHeight() {
-    var height;
-    height = $(win.window).height() - 120 + 'px';
-    $('#sidebar').css('height', height);
-    $('#sidebar').css('max-height', height);
-  }
-
-  $(win.window).resize(refreshHeight);
-  refreshHeight();
+  // function refreshHeight() {
+  //   var height;
+  //   height = $(win.window).height() - 120 + 'px';
+  //   $('#sidebar').css('height', height);
+  //   $('#sidebar').css('max-height', height);
+  // }
+  //
+  // $(win.window).resize(refreshHeight);
+  // refreshHeight();
 
   window.setTimeout(function () {
     $('#searchField').focus(); // set focus to search field
